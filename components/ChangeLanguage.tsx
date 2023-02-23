@@ -1,32 +1,29 @@
+import { FormControl, Select } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import React from "react";
 
-type Props = {};
-
-function ChangeLanguage({}: Props) {
+function SelectLanguage() {
   const router = useRouter();
-  const { locale } = router;
-  // const t = locale === "en" ? en : de
-  const changeLanguage = (e: { target: { value: any } }) => {
+  const { pathname, locale } = router;
+  const onChangeLocale = (e: any) => {
     const locale = e.target.value;
-    router.push(router.pathname, router.asPath, { locale });
+    document.cookie = `NEXT_LOCALE=${locale}; max-age=31536000; path=/`;
+    router.push("/", "/", { locale });
   };
   return (
-    <>
-      <select
-        onChange={changeLanguage}
+    <FormControl>
+      <Select
+        variant="unstyled"
+        w={16}
+        size="xl"
         defaultValue={locale}
-        className="text-white text-shadow-sm text-lg bg-transparent tracking-wide"
+        onChange={onChangeLocale}
       >
-        <option className="text-black" value="en">
-          EN
-        </option>
-        <option className="text-black" value="fr">
-          FR
-        </option>
-      </select>
-    </>
+        <option value="de">DE</option>
+        <option value="en">EN</option>
+      </Select>
+    </FormControl>
   );
 }
 
-export default ChangeLanguage;
+export default SelectLanguage;
