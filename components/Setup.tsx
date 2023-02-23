@@ -1,16 +1,17 @@
 import { Heading, Text } from "@chakra-ui/react";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 function Setup() {
+  const t = useTranslations("Setup");
   return (
     <>
-      <Heading>Provider Setup</Heading>
-      <Text>
-        After installing Chakra UI, you need to set up the ChakraProvider at the
-        root of your application.
-      </Text>
+      <Heading>{t("heading")}</Heading>
+      <Text>{t("text")}</Text>
     </>
   );
 }
 
 export default Setup;
+
+Setup.messages = ["Setup"];

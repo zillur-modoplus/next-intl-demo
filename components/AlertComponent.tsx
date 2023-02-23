@@ -1,16 +1,17 @@
 import { Heading, Text } from "@chakra-ui/react";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 function AlertComponent() {
+  const t = useTranslations("Alert");
   return (
     <>
-      <Heading>Alert</Heading>
-      <Text>
-        Alerts are used to communicate a state that affects a system, feature or
-        page.
-      </Text>
+      <Heading>{t("heading")}</Heading>
+      <Text>{t("text")}</Text>
     </>
   );
 }
+
+AlertComponent.messages = ["Alert"];
 
 export default AlertComponent;

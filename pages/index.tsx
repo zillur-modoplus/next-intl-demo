@@ -15,10 +15,13 @@ import {
 import Navbar from "@/components/Navbar";
 import Setup from "@/components/Setup";
 import TabsComponent from "@/components/TabsComponent";
+import { useRouter } from "next/router";
+import { pick } from "lodash";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const { locale } = useRouter();
   return (
     <>
       <Head>
@@ -41,4 +44,23 @@ export default function Home() {
       </VStack>
     </>
   );
+}
+
+Home.messages = [
+  ...Setup.messages,
+  ...TabsComponent.messages,
+  ...Navbar.messages,
+];
+
+export async function getServerSideProps(context: { locale: string }) {
+  return {
+    props: {
+      // You can get the messages from anywhere you like. The recommended
+      // pattern is to put them in JSON files separated by language.
+      messages: pick(
+        await import(`../messages/${context.locale}.json`),
+        Home.messages
+      ),
+    },
+  };
 }

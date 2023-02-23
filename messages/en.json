@@ -1,0 +1,23 @@
+{
+  "Navbar": {
+    "accordion": "accordion",
+    "alert": "alert",
+    "homepage": "homepage"
+  },
+  "Accordion": {
+    "heading": "accordion",
+    "text": "Accordions display a list of high-level options that can expand/collapse to reveal more information."
+  },
+  "Alert": {
+    "heading": "accordion",
+    "text": "Alerts are used to communicate a state that affects a system, feature orpage."
+  },
+  "Setup": {
+    "heading": "Setup",
+    "text": "After installing Chakra UI, you need to set up the ChakraProvider at the root of your application."
+  },
+  "Tabs": {
+    "heading": "tabs",
+    "text": "A React component that helps you build accessible tabs, by providing keyboard interactions and ARIA attributes described in the WAI-ARIA Tab Panel Design Pattern."
+  }
+}

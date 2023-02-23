@@ -1,17 +1,17 @@
 import { Heading, Text } from "@chakra-ui/react";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 function TabsComponent() {
+  const t = useTranslations("Tabs");
   return (
     <>
-      <Heading>Tabs</Heading>
-      <Text>
-        A React component that helps you build accessible tabs, by providing
-        keyboard interactions and ARIA attributes described in the WAI-ARIA Tab
-        Panel Design Pattern.
-      </Text>
+      <Heading>{t("heading")}</Heading>
+      <Text>{t("text")}</Text>
     </>
   );
 }
 
 export default TabsComponent;
+
+TabsComponent.messages = ["Tabs"];

@@ -1,0 +1,23 @@
+{
+  "Navbar": {
+    "accordion": "Akkordeon",
+    "alert": "Alarm",
+    "homepage": "Homepage"
+  },
+  "Accordion": {
+    "heading": "Akkordeon",
+    "text": "Akkordeons zeigen eine Liste von High-Level-Optionen an, die erweitert/reduziert werden können, um weitere Informationen anzuzeigen."
+  },
+  "Alert": {
+    "heading": "Alarm",
+    "text": "Warnungen werden verwendet, um einen Zustand mitzuteilen, der sich auf ein System, eine Funktion oder eine Seite auswirkt."
+  },
+  "Setup": {
+    "heading": "setup",
+    "text": "Nach der Installation von Chakra UI müssen Sie den ChakraProvider im Stammverzeichnis Ihrer Anwendung einrichten."
+  },
+  "Tabs": {
+    "heading": "tabs",
+    "text": "Eine React-Komponente, die Ihnen hilft, barrierefreie Tabs zu erstellen, indem sie Tastaturinteraktionen und ARIA-Attribute bereitstellt, die im WAI-ARIA Tab Panel Design Pattern beschrieben sind."
+  }
+}
