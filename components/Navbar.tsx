@@ -1,6 +1,5 @@
-import { Button, Flex, HStack } from "@chakra-ui/react";
+import { Button, Flex, HStack, Link } from "@chakra-ui/react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import React from "react";
 import SelectLanguage from "./ChangeLanguage";
 
